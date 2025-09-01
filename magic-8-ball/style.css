@@ -1,0 +1,17 @@
+body { font-family:sans-serif; text-align:center; margin-top:50px; }
+#ball-container{position:relative; display:inline-block;}
+#ball{font-size:100px; cursor:pointer; transition:transform 0.1s, box-shadow 0.3s; position:relative; z-index:1;
+box-shadow:0 0 30px rgba(255,255,255,0.3),0 0 60px rgba(173,216,230,0.2),0 0 90px rgba(173,216,230,0.1);}
+.shake{animation:shake 0.6s;}
+.pulse{animation:pulseGlow 1.5s infinite;}
+#questionInput{width:300px; padding:10px; font-size:16px; margin:20px 0; border-radius:5px; border:1px solid #ccc; text-align:center;}
+@keyframes shake {0%{transform:rotate(0deg);}10%{transform:rotate(20deg);}20%{transform:rotate(-20deg);}30%{transform:rotate(15deg);}40%{transform:rotate(-15deg);}50%{transform:rotate(10deg);}60%{transform:rotate(-10deg);}70%{transform:rotate(5deg);}80%{transform:rotate(-5deg);}90%{transform:rotate(2deg);}100%{transform:rotate(0deg);}}
+@keyframes pulseGlow{0%{box-shadow:0 0 30px rgba(255,255,255,0.3),0 0 60px rgba(173,216,230,0.2),0 0 90px rgba(173,216,230,0.1);}50%{box-shadow:0 0 50px rgba(255,255,255,0.5),0 0 100px rgba(173,216,230,0.4),0 0 150px rgba(173,216,230,0.2);}100%{box-shadow:0 0 30px rgba(255,255,255,0.3),0 0 60px rgba(173,216,230,0.2),0 0 90px rgba(173,216,230,0.1);}}
+.particle{position:absolute;width:12px;height:12px;border-radius:50%;pointer-events:none;opacity:0.8;animation:floatUp 2.5s ease-out forwards,fadeOut 2.5s ease-out forwards;}
+@keyframes floatUp{0%{transform:translateY(0) scale(1);}100%{transform:translateY(-120px) scale(0.6);}}
+@keyframes fadeOut{0%{opacity:0.8;}100%{opacity:0;}}
+#historyList{max-width:400px;margin:0 auto;text-align:left;list-style-type:none;padding:0;}
+#historyList li{background:rgba(173,216,230,0.1);margin:5px 0;padding:8px 12px;border-radius:6px;font-size:14px;}
+#clearHistoryBtn{margin-top:10px;padding:8px 16px;font-size:14px;border-radius:6px;border:none;cursor:pointer;background-color:#a0c4ff;color:#000;}
+#clearHistoryBtn:hover{background-color:#90b0ff;}
+button{margin:5px;padding:10px 20px;font-size:16px;}
